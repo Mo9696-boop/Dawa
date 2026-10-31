@@ -1,0 +1,6 @@
+project_id = "dawa-github-pages"
+[functions.dawa]
+# Patient devices use opaque app sessions, not Supabase user JWTs.
+# handler.mjs authenticates EVERY data request; setup/accept have separate secrets.
+verify_jwt = false
+entrypoint = "./functions/dawa/index.ts"
